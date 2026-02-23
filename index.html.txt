@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>XX Exclusive Card</title>
+<style>
+body {
+  background-color: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 100px;
+}
+.card {
+  background: #111;
+  padding: 40px;
+  border-radius: 20px;
+  width: 300px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(255,215,0,0.3);
+}
+input {
+  padding: 10px;
+  width: 80%;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+}
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: none;
+  background: gold;
+  font-weight: bold;
+}
+#balance {
+  display: none;
+  margin-top: 20px;
+  font-size: 24px;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+<h2>PiGu Exclusive Card</h2>
+<p>Enter your birthday (4 digits)</p>
+
+<input type="password" id="password" placeholder="0822">
+<br>
+<button onclick="checkPassword()">Unlock</button>
+
+<div id="balance">
+<p>Current Balance</p>
+<h1>NT$ 20,000</h1>
+<p>Saved with love ❤️</p>
+</div>
+</div>
+
+<script>
+function checkPassword() {
+  var pass = document.getElementById("password").value;
+  if (pass === "0224") { 
+    document.getElementById("balance").style.display = "block";
+  } else {
+    alert("Wrong password 💔");
+  }
+}
+</script>
+
+</body>
+</html>
